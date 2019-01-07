@@ -62,9 +62,18 @@
   <div class="container">
     <div class="tile is-parent">
       <article class="tile is-child notification is-info">
-        <p class="title">Chatbot demo</p>
-        <p class="subtitle">Session ID: <span id="session_id"> <i>Fething...</i> </span></p>
-        
+        <p class="subtitle">Session ID: <span id="session_id"><a class="button is-info is-small is-loading">Loading</a></span></p>
+        <div class="columns is-mobile">
+          <div class="column is-10 is-three-quarters-mobile">
+            <input class="input is-rounded" id="message_input" type="text" placeholder="Type your text here...">
+          </div>
+          <div class="column is-2 is-one-quarter-mobile">
+            <a class="button is-link is-inverted is-rounded" id="btn_send" onclick="SendMessage('#message_input', '#chat')">Send</a>
+          </div>
+        </div>
+        <div id="chat" class="tile is-parent is-vertical">
+
+        </div>
       </article>
     </div>
   </div>
